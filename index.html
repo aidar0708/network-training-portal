@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сеть.Знания — портал поддержки</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#home"><span class="brand-mark">N</span><span>Сеть.<b>Знания</b></span></a>
+    <nav aria-label="Основная навигация">
+      <a class="nav-item active" href="#home" data-view="home">Обзор</a>
+      <a class="nav-item" href="#academy" data-view="academy">Академия</a>
+      <a class="nav-item" href="#knowledge" data-view="knowledge">База знаний</a>
+      <a class="nav-item" href="#incidents" data-view="incidents">Разбор инцидентов</a>
+      <a class="nav-item" href="#tests" data-view="tests">Тестирование</a>
+    </nav>
+    <div class="sidebar-footer"><span class="presence"></span> Смена: НОЦ · 09:00–18:00<br><small>v0.1 · учебный контур</small></div>
+  </aside>
+  <main>
+    <header class="topbar">
+      <button class="menu-button" aria-label="Открыть меню">☰</button>
+      <label class="search"><span>⌕</span><input id="global-search" type="search" placeholder="Найти: BGP, CRC, VLAN, эскалация…" autocomplete="off"></label>
+      <button class="notification" aria-label="Уведомления">◌<span></span></button>
+      <div class="user"><div class="avatar">АК</div><div><b>Алексей К.</b><small>Инженер поддержки</small></div></div>
+    </header>
+    <section id="home" class="view visible">
+      <div class="eyebrow">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+      <div class="hero-row"><div><h1>Доброе утро, Алексей.</h1><p class="lead">Продолжайте обучение или найдите решение по действующему обращению.</p></div><button class="primary-button" data-go="academy">Продолжить обучение <span>→</span></button></div>
+      <div class="metric-grid">
+        <article class="metric"><span class="metric-label">Прогресс адаптации</span><strong>62%</strong><div class="progress"><i style="width:62%"></i></div><small>5 из 8 модулей завершено</small></article>
+        <article class="metric"><span class="metric-label">Отработано сценариев</span><strong>14</strong><small class="positive">↑ 3 за эту неделю</small></article>
+        <article class="metric"><span class="metric-label">Быстрые решения</span><strong>48</strong><small>статей в избранном</small></article>
+      </div>
+      <div class="content-grid">
+        <section class="panel continue"><div class="panel-title"><div><span class="eyebrow">ТЕКУЩИЙ МОДУЛЬ</span><h2>Диагностика проблем L2</h2></div><span class="tag amber">В процессе</span></div><p>От потери кадров до неверной VLAN-терминации: последовательность проверки и типовые признаки.</p><div class="module-meta"><span>◷ 35 мин</span><span>▣ 4 урока</span><span>◉ Лаборатория</span></div><button class="primary-button" data-go="academy">Открыть модуль <span>→</span></button></section>
+        <section class="panel"><div class="panel-title"><div><span class="eyebrow">ПОПУЛЯРНОЕ СЕЙЧАС</span><h2>Частые запросы</h2></div><button class="text-button" data-go="knowledge">Все статьи →</button></div><ol class="popular-list"><li><button data-search="Потери пакетов и CRC">Потери пакетов и ошибки CRC <span>L1</span></button></li><li><button data-search="VLAN не проходит">VLAN не проходит через транк <span>L2</span></button></li><li><button data-search="BGP соседство">BGP соседство: Idle / Active <span>L3</span></button></li><li><button data-search="Эскалация">Правила эскалации в NOC <span>Процесс</span></button></li></ol></section>
+      </div>
+      <section class="quick-section"><div class="panel-title"><div><span class="eyebrow">БЫСТРАЯ НАВИГАЦИЯ</span><h2>С чего начать диагностику?</h2></div></div><div class="quick-grid"><button class="quick-card" data-open-level="l1"><b class="layer l1">L1</b><strong>Физика</strong><span>Линк, оптика, CRC, уровень сигнала</span><i>→</i></button><button class="quick-card" data-open-level="l2"><b class="layer l2">L2</b><strong>Канальный уровень</strong><span>VLAN, MAC, STP, агрегация</span><i>→</i></button><button class="quick-card" data-open-level="l3"><b class="layer l3">L3</b><strong>Сетевой уровень</strong><span>IP, BGP, OSPF, маршрутизация</span><i>→</i></button><button class="quick-card" data-go="incidents"><b class="layer process">!</b><strong>Есть инцидент</strong><span>Пройдите сценарий диагностики</span><i>→</i></button></div></section>
+    </section>
+    <section id="academy" class="view">
+      <div class="eyebrow">АДАПТАЦИЯ НОВЫХ СОТРУДНИКОВ</div><h1>Академия инженера поддержки</h1><p class="lead">Практическая программа: от устройства провайдерской сети до самостоятельного ведения инцидента.</p>
+      <div class="learning-layout"><section class="learning-path" id="learning-path"></section><aside class="panel competence"><span class="eyebrow">ВАШ ПРОФИЛЬ</span><h2>Уверенный старт</h2><div class="donut"><span>62<small>%</small></span></div><p>Следующий шаг: закрепить диагностику L2 в лаборатории.</p><hr><b>До следующего уровня</b><div class="progress"><i style="width:44%"></i></div><small>6 из 14 практических заданий</small></aside></div>
+      <section class="mpls-guide" id="network-orientation" tabindex="-1">
+        <div class="orientation-banner"><span class="orientation-icon">◎</span><div><span class="eyebrow">ИНТЕРАКТИВНЫЙ ОБЗОР</span><h2>Сеть национального оператора: от абонента до международного стыка</h2><p>Эта карта помогает определить, в какой домен попал инцидент и какая команда отвечает за его устранение.</p></div></div>
+        <div class="operator-domains" aria-label="Домены сети национального оператора">
+          <article><span>01</span><b>Доступ</b><p>FTTx, xPON, Ethernet, мобильный и корпоративный last mile. Здесь находятся CPE/CE и первые точки измерения качества.</p></article>
+          <article><span>02</span><b>Агрегация</b><p>Собирает трафик районов и городов. Metro Ethernet, кольца, BRAS/BNG, агрегационные PE и резервирование uplink.</p></article>
+          <article><span>03</span><b>Транспорт</b><p>Региональные DWDM/OTN-магистрали и MPLS IP-core. Обеспечивает LSP между PE и переживает отказ линии или узла.</p></article>
+          <article><span>04</span><b>Сервисы и внешние сети</b><p>DC, облака, интернет-пиринги, IX, транзит и межоператорские стыки. Здесь заканчиваются сервисные SLA и зоны влияния.</p></article>
+        </div>
+        <div class="guide-heading"><div><span class="eyebrow">МОДУЛЬ 01 · ОРИЕНТАЦИЯ</span><h2>Как устроена MPLS-сеть провайдера</h2><p>Базовая модель, по которой инженер быстро определяет зону ответственности и выбирает правильную точку диагностики.</p></div><span class="tag">20 мин</span></div>
+        <div class="mpls-diagram" aria-label="Схема MPLS L3VPN: клиентские CE подключены через граничные PE к ядру P">
+          <div class="node customer"><b>CE-A</b><small>Сеть клиента A</small></div><i class="link access">L2 / L3</i><div class="node edge"><b>PE-1</b><small>Граница провайдера</small></div><i class="link label">IGP + LDP<br><em>транспортная метка</em></i><div class="core-wrap"><div class="node core"><b>P-1</b><small>Ядро MPLS</small></div><div class="node core"><b>P-2</b><small>Ядро MPLS</small></div></div><i class="link label">IGP + LDP<br><em>транспортная метка</em></i><div class="node edge"><b>PE-2</b><small>Граница провайдера</small></div><i class="link access">L2 / L3</i><div class="node customer"><b>CE-B</b><small>Сеть клиента B</small></div>
+        </div>
+        <div class="mpls-columns">
+          <article><span class="role-chip ce">CE</span><h3>Клиентское оборудование</h3><p>CE (Customer Edge) — маршрутизатор или коммутатор клиента. На стыке с PE проверяем физический линк, IP-адресацию, BGP/статический маршрут и MTU.</p><code>Зона: доступ / клиент</code></article>
+          <article><span class="role-chip pe">PE</span><h3>Граница провайдера</h3><p>PE (Provider Edge) принимает клиентский маршрут в отдельную VRF, назначает VPN-метку и помещает пакет в MPLS-туннель. Здесь сходятся сервис и транспорт.</p><code>Зона: сервис / VPN</code></article>
+          <article><span class="role-chip p">P</span><h3>Транспортное ядро</h3><p>P (Provider) не знает маршрутов клиента и VRF. Он пересылает пакет только по внешней транспортной метке, полученной через IGP и LDP/RSVP.</p><code>Зона: магистраль</code></article>
+        </div>
+        <div class="packet-walk"><div><span class="step-num">1</span><b>CE-A → PE-1</b><p>PE-1 определяет клиентскую VRF по интерфейсу или VLAN и ищет маршрут внутри неё.</p></div><div><span class="step-num">2</span><b>Две метки</b><p>PE-1 добавляет внутреннюю VPN-метку и внешнюю транспортную метку до PE-2.</p></div><div><span class="step-num">3</span><b>Через P-ядро</b><p>Каждый P-роутер заменяет только внешнюю метку. Клиентский IP-пакет не анализируется.</p></div><div><span class="step-num">4</span><b>PE-2 → CE-B</b><p>PE-2 снимает метки, выбирает VRF по VPN-метке и отправляет обычный IP-пакет клиенту.</p></div></div>
+        <details class="diagnostic-note" open><summary>Что проверять при проблеме в MPLS L3VPN</summary><ol><li>На CE–PE: линк, ошибки интерфейса, ARP/ND, адресация, MTU и состояние BGP/статического маршрута.</li><li>На PE: принадлежность порта нужной VRF, маршруты VRF, import/export route-target и VPNv4/EVPN-сигнализация.</li><li>В ядре: IGP-связность между PE, LDP/RSVP-сессии, MPLS forwarding и transport LSP до удалённого PE.</li><li>Сверьте симметричность пути: проблема может быть только в обратном направлении.</li></ol>
+          <div class="vendor-commands"><div class="vendor-title"><span class="eyebrow">ШПАРГАЛКА ПО ОБОРУДОВАНИЮ</span><h3>Команды проверки: Cisco · Juniper · Huawei</h3><p>Только команды чтения. Перед выполнением уточните платформу и версию ОС: синтаксис может отличаться.</p></div>
+            <div class="command-table"><div class="command-row command-head"><span>Проверка</span><span>Cisco IOS XR / IOS XE</span><span>Juniper Junos</span><span>Huawei VRP</span></div>
+              <div class="command-row"><b>Линк и ошибки</b><code>show interfaces &lt;if&gt;</code><code>show interfaces &lt;if&gt; extensive</code><code>display interface &lt;if&gt;</code></div>
+              <div class="command-row"><b>Соседи LDP</b><code>show mpls ldp neighbor</code><code>show ldp session</code><code>display mpls ldp peer</code></div>
+              <div class="command-row"><b>MPLS-метки / LSP</b><code>show mpls forwarding-table</code><code>show route table mpls.0</code><code>display mpls lsp</code></div>
+              <div class="command-row"><b>Маршруты VRF</b><code>show ip route vrf &lt;vrf&gt;</code><code>show route table &lt;vrf&gt;.inet.0</code><code>display ip routing-table vpn-instance &lt;vrf&gt;</code></div>
+              <div class="command-row"><b>BGP VPNv4</b><code>show bgp vpnv4 unicast summary</code><code>show bgp summary</code><code>display bgp vpnv4 vpn-instance &lt;vrf&gt; peer</code></div>
+              <div class="command-row"><b>Путь до удалённого PE</b><code>traceroute mpls ipv4 &lt;ip&gt;</code><code>traceroute mpls &lt;ip&gt;</code><code>tracert lsp ip &lt;ip&gt;</code></div>
+            </div>
+          </div>
+        </details>
+      </section>
+      <section class="level-guide" id="level-guide">
+        <div class="guide-heading"><div><span class="eyebrow">ПРАКТИЧЕСКАЯ ДИАГНОСТИКА</span><h2>Уровни L1, L2 и L3</h2><p>Начинайте с нижнего уровня. Не меняйте конфигурацию, пока симптомы не подтверждены данными.</p></div></div>
+        <article class="level-detail" id="level-l1"><div class="level-title"><b class="layer l1">L1</b><div><h3>Физический уровень</h3><p>Среда передачи и состояние порта: оптика, медь, питание, SFP/QSFP, скорость и дуплекс.</p></div></div><div class="level-points"><div><b>Симптомы</b><span>Link down/flap, CRC, input errors, low Rx power, потери при стабильном IP.</span></div><div><b>Первые проверки</b><span>Состояние порта, счётчики, оптические уровни, FEC, speed/duplex и патч-панель.</span></div><div><b>Эскалировать</b><span>В выездную/транспортную службу при деградации волокна, аварии питания или неисправном модуле.</span></div></div>
+          <details class="l1-overview" open><summary>Обзор L1: как проходит физический канал</summary><p class="l1-intro">Физический уровень отвечает за то, чтобы сигнал дошёл от клиентского устройства до порта сети оператора без ошибок. MPLS, VLAN и IP не помогут, если линк нестабилен или оптический бюджет исчерпан.</p><div class="physical-path"><div><b>Клиент</b><span>CPE / CE<br>патч-корд</span></div><i>↔</i><div><b>Доступ</b><span>ONT / OLT<br>FTTx, PON</span></div><i>↔</i><div><b>Агрегация</b><span>Metro switch<br>кольцо / uplink</span></div><i>↔</i><div><b>Транспорт</b><span>DWDM / OTN<br>магистраль</span></div></div><div class="l1-checks"><div><b>1. Порт</b><p>Admin/oper status, speed/duplex, автосогласование, flapping и счётчики errors.</p></div><div><b>2. Оптика</b><p>Tx/Rx power, пороги DOM/DDM, SFP/QSFP-совместимость, загрязнение коннектора и затухание.</p></div><div><b>3. Трасса</b><p>Патч-панель, сварки, кроссировка, аварии питания, состояние OLT/транспортного пролёта.</p></div><div><b>4. Фиксация</b><p>Сохраните временной интервал, значения ошибок и уровни сигнала до передачи в field/transport.</p></div></div><p class="l1-warning"><b>Важно:</b> CRC и FCS обычно указывают на проблему до L2/L3. Не очищайте счётчики и не заменяйте VLAN, пока не сняты исходные показатели интерфейса.</p></details>
+        </article>
+        <article class="level-detail" id="level-l2"><div class="level-title"><b class="layer l2">L2</b><div><h3>Канальный уровень</h3><p>Кадры Ethernet и сегментация: VLAN/QinQ, MAC-таблица, STP, LACP и pseudowire.</p></div></div><div class="level-points"><div><b>Симптомы</b><span>MAC не обучается, VLAN не проходит, STP blocking, LACP member down, широковещательная буря.</span></div><div><b>Первые проверки</b><span>Allowed/native VLAN, MAC-table, состояние STP, LACP, MTU и корректность тегирования.</span></div><div><b>Эскалировать</b><span>В команду доступа/Metro при петле, ошибке кроссировки или проблеме в агрегирующем кольце.</span></div></div></article>
+        <article class="level-detail" id="level-l3"><div class="level-title"><b class="layer l3">L3</b><div><h3>Сетевой уровень</h3><p>IP-связность и маршрутизация: ARP/ND, VRF, IGP, BGP, политики, ECMP и MTU path.</p></div></div><div class="level-points"><div><b>Симптомы</b><span>Нет маршрута, BGP Idle/Active, асимметрия, blackhole, недоступна часть префиксов.</span></div><div><b>Первые проверки</b><span>RIB/FIB, next-hop, ARP, VRF, BGP/IGP-соседства, prefix-policy и traceroute.</span></div><div><b>Эскалировать</b><span>В IP-core/сервисную команду при ошибке анонса, policy, VRF или межрегиональном LSP.</span></div></div></article>
+      </section>
+    </section>
+    <section id="knowledge" class="view">
+      <div class="eyebrow">ЕДИНАЯ БАЗА ЗНАНИЙ</div><h1>Решения в контексте сети</h1><p class="lead">Инструкции, чек-листы и известные проблемы для ускорения диагностики.</p>
+      <div class="knowledge-controls"><label class="search wide"><span>⌕</span><input id="knowledge-search" type="search" placeholder="Введите симптом, технологию или команду"></label><div class="filters"><button class="filter active" data-filter="all">Все</button><button class="filter" data-filter="L1">L1</button><button class="filter" data-filter="L2">L2</button><button class="filter" data-filter="L3">L3</button><button class="filter" data-filter="Процесс">Процесс</button></div></div>
+      <div id="search-note" class="search-note" aria-live="polite"></div><div class="article-grid" id="article-grid"></div>
+    </section>
+    <section id="incidents" class="view">
+      <div class="eyebrow">ТРЕНАЖЁР</div><h1>Разбор инцидента</h1><p class="lead">Потренируйте последовательность действий без риска для клиентской сети.</p>
+      <div class="incident-layout"><section class="panel scenario"><div class="scenario-top"><span class="tag red">P2 · деградация</span><span>INC-2481</span></div><h2>Клиент сообщает о потере пакетов</h2><p>Канал Ethernet, 1 Гбит/с. Связь есть, но ERP-система периодически недоступна. За последние 10 минут: 3 жалобы.</p><div class="evidence"><span>Узел: <b>ALM-DC-01</b></span><span>Интерфейс: <b>xe-0/0/12</b></span><span>Начало: <b>10:42</b></span></div><div id="scenario-log" class="scenario-log"><p>Выберите первое действие. Цель — локализовать уровень проблемы, не меняя конфигурацию.</p></div><div class="action-list" id="actions"><button data-action="ping">Проверить потери и задержку</button><button data-action="interface">Проверить счётчики интерфейса</button><button data-action="vlan">Переназначить VLAN</button><button data-action="escalate">Сразу эскалировать</button></div></section><aside class="panel playbook"><span class="eyebrow">ПОДСКАЗКА</span><h2>Правило «снизу вверх»</h2><p>При деградации сначала проверьте физический уровень и статистику интерфейса, затем переходите к L2/L3.</p><hr><h3>Оценка сценария</h3><div class="progress"><i id="scenario-progress" style="width:0%"></i></div><p id="scenario-score">0 из 3 диагностических шагов</p></aside></div>
+    </section>
+    <section id="tests" class="view">
+      <div class="eyebrow">ИТОГОВАЯ АТТЕСТАЦИЯ</div><h1>Проверьте готовность к смене</h1><p class="lead">Тесты открываются после модулей обучения. Результат сохраняется в профиле сотрудника.</p>
+      <div class="test-layout">
+        <aside class="test-list panel"><span class="eyebrow">ДОСТУПНЫЕ ТЕСТЫ</span><button class="test-select active" data-test="mpls"><b>MPLS и L3VPN</b><small>10 вопросов · проходной балл 80%</small><span>Начать →</span></button><button class="test-select" data-test="l2"><b>Диагностика L2</b><small>8 вопросов · проходной балл 75%</small><span>Начать →</span></button><button class="test-select locked" disabled><b>Итоговая аттестация</b><small>Откроется после двух тестов</small><span>🔒</span></button></aside>
+        <section class="test-card panel"><div class="test-top"><div><span class="eyebrow" id="test-category">ТЕСТ · MPLS И L3VPN</span><h2 id="test-title">Базовая архитектура MPLS</h2></div><span id="test-count" class="tag">Вопрос 1 из 3</span></div><div id="test-progress" class="progress"><i style="width:33%"></i></div><div id="question-area" class="question-area"></div><div class="test-actions"><button id="next-question" class="primary-button" disabled>Ответить <span>→</span></button><button id="restart-test" class="text-button">Начать заново</button></div></section>
+      </div>
+    </section>
+  </main>
+  <template id="article-template"><article class="article-card"><div class="article-head"><span class="tag"></span><button class="bookmark" aria-label="Добавить в избранное">☆</button></div><h2></h2><p></p><div class="article-footer"><span></span><button>Открыть →</button></div></article></template>
+  <script src="app.js"></script>
+</body>
+</html>
